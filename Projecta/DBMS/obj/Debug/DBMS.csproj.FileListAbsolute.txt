@@ -1,0 +1,14 @@
+C:\Projects\DBMS\DBMS\bin\Debug\DBMS.exe.config
+C:\Projects\DBMS\DBMS\bin\Debug\DBMS.exe
+C:\Projects\DBMS\DBMS\bin\Debug\DBMS.pdb
+C:\Projects\DBMS\DBMS\obj\Debug\DBMS.csprojResolveAssemblyReference.cache
+C:\Projects\DBMS\DBMS\obj\Debug\DBMS.Form1.resources
+C:\Projects\DBMS\DBMS\obj\Debug\DBMS.Form2.resources
+C:\Projects\DBMS\DBMS\obj\Debug\DBMS.Properties.Resources.resources
+C:\Projects\DBMS\DBMS\obj\Debug\DBMS.csproj.GenerateResource.cache
+C:\Projects\DBMS\DBMS\obj\Debug\DBMS.csproj.CoreCompileInputs.cache
+C:\Projects\DBMS\DBMS\obj\Debug\DBMS.exe
+C:\Projects\DBMS\DBMS\obj\Debug\DBMS.pdb
+C:\Projects\DBMS\DBMS\obj\Debug\DBMS.Form3.resources
+C:\Projects\DBMS\DBMS\obj\Debug\DBMS.Form4.resources
+C:\Projects\DBMS\DBMS\obj\Debug\DBMS.Form5.resources
