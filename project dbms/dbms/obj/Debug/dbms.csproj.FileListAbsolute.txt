@@ -1,0 +1,3 @@
+c:\users\aplus\documents\visual studio 2015\Projects\dbms\dbms\bin\Debug\dbms.exe.config
+C:\Users\aplus\Desktop\project dbms\dbms\bin\Debug\dbms.exe.config
+C:\Users\aplus\Desktop\dbms\project dbms\dbms\bin\Debug\dbms.exe.config
