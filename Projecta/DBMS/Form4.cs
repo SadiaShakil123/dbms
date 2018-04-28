@@ -23,11 +23,49 @@ namespace DBMS
             f6.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void button4_Click(object sender, EventArgs e)
         {
-            Form7 f7 = new Form7();
-            //this.Hide();
-            f7.ShowDialog();
+           
+ 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            department d = new department();
+            d.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form6 f6 = new Form6();
+            f6.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            patient1 p1 = new patient1();
+            p1.Show();
         }
     }
 }
