@@ -57,6 +57,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(217, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -78,6 +79,7 @@
             this.label4.Size = new System.Drawing.Size(185, 31);
             this.label4.TabIndex = 6;
             this.label4.Text = "Admin Login";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -90,6 +92,7 @@
             this.label3.Size = new System.Drawing.Size(79, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "Email";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
             // 
@@ -102,6 +105,7 @@
             this.label1.Size = new System.Drawing.Size(111, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Password";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button2
             // 
@@ -131,6 +135,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(757, 432);
             this.panel4.TabIndex = 12;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel2
             // 
@@ -141,6 +146,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(760, 119);
             this.panel2.TabIndex = 14;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -148,6 +154,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(218, 184);
             this.panel3.TabIndex = 0;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label2
             // 
@@ -218,6 +225,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(254, 118);
             this.panel5.TabIndex = 0;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label5
             // 
@@ -240,6 +248,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // AdminLogin
             // 

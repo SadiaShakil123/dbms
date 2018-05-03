@@ -16,8 +16,79 @@ namespace DBMS
         public patient1()
         {
             InitializeComponent();
+            fillcombo_branch(comboBox2);
+            fillcombo_Department(comboBox3);
         }
-
+        private void fillcombo_branch(ComboBox c)
+        {
+            string conUrl = "Data Source=DESKTOP-0DGR9RA; Initial Catalog = Hospital Management System; Integrated Security = True";
+            SqlConnection conn = new SqlConnection(conUrl);
+            string cmd = "select * from dbo.Hospital";
+            SqlCommand command = new SqlCommand(cmd, conn);
+            conn.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string add = reader["H_Region"].ToString();
+                c.Items.Add(add);
+            }
+            conn.Close();
+        }
+        private void fillcombo_Department(ComboBox c)
+        {
+            string conUrl = "Data Source=DESKTOP-0DGR9RA; Initial Catalog = Hospital Management System; Integrated Security = True";
+            SqlConnection conn = new SqlConnection(conUrl);
+            string cmd = "select * from dbo.Department";
+            SqlCommand command = new SqlCommand(cmd, conn);
+            conn.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string add = reader["Dpt_Name"].ToString();
+                c.Items.Add(add);
+            }
+            conn.Close();
+        }
+        private int getDeptId(ComboBox c)
+        {
+            int bId = 0;
+            string conUrl = "Data Source=DESKTOP-0DGR9RA; Initial Catalog = Hospital Management System; Integrated Security = True";
+            SqlConnection conn = new SqlConnection(conUrl);
+            string cmd = "select * from dbo.Department";
+            SqlCommand command = new SqlCommand(cmd, conn);
+            conn.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader["Dpt_Name"].ToString() == c.SelectedItem.ToString())
+                {
+                    bId = int.Parse(reader["Dpt_id"].ToString());
+                    break;
+                }
+            }
+            conn.Close();
+            return bId;
+        }
+        private int getBranchId(ComboBox c)
+        {
+            int bId = 0;
+            string conUrl = "Data Source=DESKTOP-0DGR9RA; Initial Catalog = Hospital Management System; Integrated Security = True";
+            SqlConnection conn = new SqlConnection(conUrl);
+            string cmd = "select * from dbo.Hospital";
+            SqlCommand command = new SqlCommand(cmd, conn);
+            conn.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader["H_Region"].ToString() == c.SelectedItem.ToString())
+                {
+                    bId = int.Parse(reader["Branch_Id"].ToString());
+                    break;
+                }
+            }
+            conn.Close();
+            return bId;
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
             /*
@@ -46,6 +117,14 @@ namespace DBMS
             SqlCommand command1 = new SqlCommand(add1, conn);
             command1.ExecuteNonQuery();
             MessageBox.Show("Patient Added!");*/
+            string name = textBox1.Text;
+            string gender = comboBox1.SelectedItem.ToString();
+            int age = int.Parse(textBox4.Text);
+            string cnic = textBox2.Text;
+            int branch_Id = getBranchId(comboBox2);
+            int detId = getDeptId(comboBox3);
+            Patient p = new Patient(name, gender, age, cnic, branch_Id, detId);
+            p.addPatient();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

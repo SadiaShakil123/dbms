@@ -148,5 +148,11 @@ namespace DBMS
         {
             Application.Exit();
         }
+
+        private void bunifuFlatButton3_Click_1(object sender, EventArgs e)
+        {
+            doctorLogin f3 = new doctorLogin();
+            f3.Show();
+        }
     }
 }

@@ -8,14 +8,18 @@ using System.Threading.Tasks;
 
 namespace DBMS
 {
-    class Patient:Person
+    class Doctor : Person
     {
         int deptId;
-        public Patient(string name, string gender, int age, string cnic, int branch_Id, int deptId) :base(name, gender, age, cnic, branch_Id)
+        int salary;
+        string designation;
+        public Doctor(string name, string gender, int age, string cnic, int branch_Id, int deptId, int salary, string designation) :base(name, gender, age, cnic, branch_Id)
         {
             this.deptId = deptId;
+            this.salary = salary;
+            this.designation = designation;
         }
-        public void addPatient()
+        public void addDoctor()
         {
             SqlTransaction tr;
 
@@ -27,7 +31,7 @@ namespace DBMS
             try
             {
                 // string cmd = "set autocommit=0;start transaction;insert into H_User values ("+this.name+","+this.gender+","+this.age+","+this.cnic+","+this.salary+","+this.access+","+this.email+","+this.password+","+this.branch_Id+");commit;rollback";
-                string cmd = "insert into dbo.Patient values ('" + this.name + "','" + this.gender + "'," + this.age + ",'" + this.cnic + "'," + this.deptId + "," + this.branch_Id + ")";
+                string cmd = "insert into dbo.Doctor values ('" + this.name + "','" + this.gender + "'," + this.age + ",'" + this.cnic + "'," + this.deptId + "," + this.salary + ",'" + this.designation + "'," + this.branch_Id + ")";
                 SqlCommand command = new SqlCommand(cmd, conn);
                 command.Transaction = tr;
                 int ex = 0;
@@ -55,6 +59,5 @@ namespace DBMS
                 Console.WriteLine("Neither record was written to database.");
             }
         }
-
     }
 }

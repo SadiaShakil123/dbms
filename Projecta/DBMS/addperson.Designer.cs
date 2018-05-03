@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addperson));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -95,7 +96,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -117,8 +117,44 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(234, 594);
+            this.panel1.Size = new System.Drawing.Size(227, 594);
             this.panel1.TabIndex = 19;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // bunifuFlatButton3
+            // 
+            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.Silver;
+            this.bunifuFlatButton3.BackColor = System.Drawing.Color.DimGray;
+            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton3.BorderRadius = 0;
+            this.bunifuFlatButton3.ButtonText = "        Add User";
+            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton3.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.ForeColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
+            this.bunifuFlatButton3.Iconimage_right = null;
+            this.bunifuFlatButton3.Iconimage_right_Selected = null;
+            this.bunifuFlatButton3.Iconimage_Selected = null;
+            this.bunifuFlatButton3.IconRightVisible = true;
+            this.bunifuFlatButton3.IconRightZoom = 0D;
+            this.bunifuFlatButton3.IconVisible = true;
+            this.bunifuFlatButton3.IconZoom = 40D;
+            this.bunifuFlatButton3.IsTab = false;
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 349);
+            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
+            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.DimGray;
+            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Silver;
+            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton3.selected = false;
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(220, 44);
+            this.bunifuFlatButton3.TabIndex = 26;
+            this.bunifuFlatButton3.Text = "        Add User";
+            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
             // bunifuFlatButton4
             // 
@@ -147,7 +183,7 @@
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Silver;
             this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(234, 52);
+            this.bunifuFlatButton4.Size = new System.Drawing.Size(220, 40);
             this.bunifuFlatButton4.TabIndex = 25;
             this.bunifuFlatButton4.Text = "        Add Doctor";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,7 +218,7 @@
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Silver;
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(234, 52);
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(220, 40);
             this.bunifuFlatButton2.TabIndex = 23;
             this.bunifuFlatButton2.Text = "        Add Staff";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,12 +253,13 @@
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Silver;
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(234, 52);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(220, 40);
             this.bunifuFlatButton1.TabIndex = 22;
             this.bunifuFlatButton1.Text = "        Main  Menu";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // panel5
             // 
@@ -231,8 +268,9 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(234, 118);
+            this.panel5.Size = new System.Drawing.Size(227, 106);
             this.panel5.TabIndex = 0;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label5
             // 
@@ -244,16 +282,18 @@
             this.label5.Size = new System.Drawing.Size(102, 33);
             this.label5.TabIndex = 5;
             this.label5.Text = "H-M-S";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -262,15 +302,17 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(230, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(817, 118);
+            this.panel2.Size = new System.Drawing.Size(813, 124);
             this.panel2.TabIndex = 20;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(-219, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(218, 184);
+            this.panel3.Size = new System.Drawing.Size(204, 172);
             this.panel3.TabIndex = 0;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label2
             // 
@@ -282,6 +324,7 @@
             this.label2.Size = new System.Drawing.Size(437, 34);
             this.label2.TabIndex = 4;
             this.label2.Text = "Welcome to National Hospital";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel8
             // 
@@ -290,8 +333,9 @@
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel8.Location = new System.Drawing.Point(230, 114);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(817, 480);
+            this.panel8.Size = new System.Drawing.Size(803, 468);
             this.panel8.TabIndex = 23;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // panel6
             // 
@@ -318,42 +362,50 @@
             this.panel6.Controls.Add(this.label22);
             this.panel6.Location = new System.Drawing.Point(233, 117);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(814, 477);
+            this.panel6.Size = new System.Drawing.Size(800, 465);
             this.panel6.TabIndex = 24;
             this.panel6.Visible = false;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // comboBox7
             // 
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(569, 156);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(217, 21);
+            this.comboBox7.Size = new System.Drawing.Size(203, 21);
             this.comboBox7.TabIndex = 26;
+            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(569, 252);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(217, 20);
+            this.textBox7.Size = new System.Drawing.Size(203, 20);
             this.textBox7.TabIndex = 25;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(178, 256);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(217, 20);
+            this.textBox8.Size = new System.Drawing.Size(203, 20);
             this.textBox8.TabIndex = 24;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
-            "Admin",
-            "Receptionist"});
+            "Attending Physician",
+            "Medical Student",
+            "Doctor on Call",
+            "Specialist",
+            "Intern"});
             this.comboBox4.Location = new System.Drawing.Point(178, 107);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(217, 21);
+            this.comboBox4.Size = new System.Drawing.Size(203, 21);
             this.comboBox4.TabIndex = 23;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -361,11 +413,12 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DarkGray;
-            this.label13.Location = new System.Drawing.Point(36, 107);
+            this.label13.Location = new System.Drawing.Point(30, 107);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(120, 25);
+            this.label13.Size = new System.Drawing.Size(139, 25);
             this.label13.TabIndex = 22;
-            this.label13.Text = "User Type";
+            this.label13.Text = "Designation";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -378,21 +431,24 @@
             this.label14.Size = new System.Drawing.Size(81, 25);
             this.label14.TabIndex = 21;
             this.label14.Text = "Salary";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(569, 107);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(217, 20);
+            this.textBox11.Size = new System.Drawing.Size(203, 20);
             this.textBox11.TabIndex = 17;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(569, 205);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(217, 21);
+            this.comboBox5.Size = new System.Drawing.Size(203, 21);
             this.comboBox5.TabIndex = 16;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // comboBox6
             // 
@@ -402,8 +458,9 @@
             "Female"});
             this.comboBox6.Location = new System.Drawing.Point(178, 210);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(217, 21);
+            this.comboBox6.Size = new System.Drawing.Size(203, 21);
             this.comboBox6.TabIndex = 15;
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -416,6 +473,7 @@
             this.label15.Size = new System.Drawing.Size(91, 25);
             this.label15.TabIndex = 14;
             this.label15.Text = "Branch";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label17
             // 
@@ -428,6 +486,7 @@
             this.label17.Size = new System.Drawing.Size(136, 25);
             this.label17.TabIndex = 12;
             this.label17.Text = "Department";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label18
             // 
@@ -440,6 +499,7 @@
             this.label18.Size = new System.Drawing.Size(69, 25);
             this.label18.TabIndex = 11;
             this.label18.Text = "CNIC";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label19
             // 
@@ -452,6 +512,7 @@
             this.label19.Size = new System.Drawing.Size(88, 25);
             this.label19.TabIndex = 10;
             this.label19.Text = "Gender";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
@@ -464,6 +525,7 @@
             this.label20.Size = new System.Drawing.Size(72, 25);
             this.label20.TabIndex = 7;
             this.label20.Text = "Name";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // button1
             // 
@@ -472,17 +534,19 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(382, 370);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 40);
+            this.button1.Size = new System.Drawing.Size(94, 28);
             this.button1.TabIndex = 9;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox12
             // 
             this.textBox12.Location = new System.Drawing.Point(178, 158);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(217, 20);
+            this.textBox12.Size = new System.Drawing.Size(203, 20);
             this.textBox12.TabIndex = 1;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // label21
             // 
@@ -495,6 +559,7 @@
             this.label21.Size = new System.Drawing.Size(52, 25);
             this.label21.TabIndex = 8;
             this.label21.Text = "Age";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label22
             // 
@@ -507,6 +572,7 @@
             this.label22.Size = new System.Drawing.Size(211, 31);
             this.label22.TabIndex = 6;
             this.label22.Text = "Doctor Register";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // panel7
             // 
@@ -529,23 +595,26 @@
             this.panel7.Controls.Add(this.label32);
             this.panel7.Location = new System.Drawing.Point(233, 114);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(814, 480);
+            this.panel7.Size = new System.Drawing.Size(800, 468);
             this.panel7.TabIndex = 25;
             this.panel7.Visible = false;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // textBox13
             // 
             this.textBox13.Location = new System.Drawing.Point(557, 278);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(217, 20);
+            this.textBox13.Size = new System.Drawing.Size(203, 20);
             this.textBox13.TabIndex = 25;
+            this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // textBox14
             // 
             this.textBox14.Location = new System.Drawing.Point(178, 275);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(217, 20);
+            this.textBox14.Size = new System.Drawing.Size(203, 20);
             this.textBox14.TabIndex = 24;
+            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
             // label24
             // 
@@ -558,21 +627,24 @@
             this.label24.Size = new System.Drawing.Size(81, 25);
             this.label24.TabIndex = 21;
             this.label24.Text = "Salary";
+            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // textBox17
             // 
             this.textBox17.Location = new System.Drawing.Point(557, 159);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(217, 20);
+            this.textBox17.Size = new System.Drawing.Size(203, 20);
             this.textBox17.TabIndex = 17;
+            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // comboBox8
             // 
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Location = new System.Drawing.Point(557, 214);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(217, 21);
+            this.comboBox8.Size = new System.Drawing.Size(203, 21);
             this.comboBox8.TabIndex = 16;
+            this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
             // 
             // comboBox9
             // 
@@ -582,8 +654,9 @@
             "Female"});
             this.comboBox9.Location = new System.Drawing.Point(178, 216);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(217, 21);
+            this.comboBox9.Size = new System.Drawing.Size(203, 21);
             this.comboBox9.TabIndex = 15;
+            this.comboBox9.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
             // 
             // label25
             // 
@@ -596,6 +669,7 @@
             this.label25.Size = new System.Drawing.Size(91, 25);
             this.label25.TabIndex = 14;
             this.label25.Text = "Branch";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // label28
             // 
@@ -608,6 +682,7 @@
             this.label28.Size = new System.Drawing.Size(69, 25);
             this.label28.TabIndex = 11;
             this.label28.Text = "CNIC";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label29
             // 
@@ -620,6 +695,7 @@
             this.label29.Size = new System.Drawing.Size(88, 25);
             this.label29.TabIndex = 10;
             this.label29.Text = "Gender";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label30
             // 
@@ -632,6 +708,7 @@
             this.label30.Size = new System.Drawing.Size(72, 25);
             this.label30.TabIndex = 7;
             this.label30.Text = "Name";
+            this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
             // button3
             // 
@@ -640,7 +717,7 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Location = new System.Drawing.Point(365, 348);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 40);
+            this.button3.Size = new System.Drawing.Size(94, 28);
             this.button3.TabIndex = 9;
             this.button3.Text = "Register";
             this.button3.UseVisualStyleBackColor = false;
@@ -650,7 +727,7 @@
             // 
             this.textBox18.Location = new System.Drawing.Point(178, 158);
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(217, 20);
+            this.textBox18.Size = new System.Drawing.Size(203, 20);
             this.textBox18.TabIndex = 1;
             this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
@@ -665,6 +742,7 @@
             this.label31.Size = new System.Drawing.Size(52, 25);
             this.label31.TabIndex = 8;
             this.label31.Text = "Age";
+            this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // label32
             // 
@@ -677,6 +755,7 @@
             this.label32.Size = new System.Drawing.Size(189, 31);
             this.label32.TabIndex = 6;
             this.label32.Text = "Staff Register";
+            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // panel4
             // 
@@ -705,7 +784,7 @@
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(230, 114);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(817, 480);
+            this.panel4.Size = new System.Drawing.Size(803, 468);
             this.panel4.TabIndex = 26;
             this.panel4.Visible = false;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
@@ -714,15 +793,17 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(557, 278);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(217, 20);
+            this.textBox6.Size = new System.Drawing.Size(203, 20);
             this.textBox6.TabIndex = 25;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(178, 256);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 20);
+            this.textBox2.Size = new System.Drawing.Size(203, 20);
             this.textBox2.TabIndex = 24;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // comboBox3
             // 
@@ -732,8 +813,9 @@
             "Receptionist"});
             this.comboBox3.Location = new System.Drawing.Point(178, 107);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(217, 21);
+            this.comboBox3.Size = new System.Drawing.Size(203, 21);
             this.comboBox3.TabIndex = 23;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -746,6 +828,7 @@
             this.label12.Size = new System.Drawing.Size(120, 25);
             this.label12.TabIndex = 22;
             this.label12.Text = "User Type";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label11
             // 
@@ -758,35 +841,40 @@
             this.label11.Size = new System.Drawing.Size(81, 25);
             this.label11.TabIndex = 21;
             this.label11.Text = "Salary";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(557, 232);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(217, 20);
+            this.textBox5.Size = new System.Drawing.Size(203, 20);
             this.textBox5.TabIndex = 19;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(557, 184);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(217, 20);
+            this.textBox4.Size = new System.Drawing.Size(203, 20);
             this.textBox4.TabIndex = 18;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(557, 134);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(217, 20);
+            this.textBox3.Size = new System.Drawing.Size(203, 20);
             this.textBox3.TabIndex = 17;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(178, 307);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(217, 21);
+            this.comboBox2.Size = new System.Drawing.Size(203, 21);
             this.comboBox2.TabIndex = 16;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -796,8 +884,9 @@
             "Female"});
             this.comboBox1.Location = new System.Drawing.Point(178, 210);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(217, 21);
+            this.comboBox1.Size = new System.Drawing.Size(203, 21);
             this.comboBox1.TabIndex = 15;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -810,6 +899,7 @@
             this.label10.Size = new System.Drawing.Size(91, 25);
             this.label10.TabIndex = 14;
             this.label10.Text = "Branch";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
@@ -822,6 +912,7 @@
             this.label9.Size = new System.Drawing.Size(111, 25);
             this.label9.TabIndex = 13;
             this.label9.Text = "Password";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -834,6 +925,7 @@
             this.label8.Size = new System.Drawing.Size(79, 25);
             this.label8.TabIndex = 12;
             this.label8.Text = "Email";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -846,6 +938,7 @@
             this.label7.Size = new System.Drawing.Size(69, 25);
             this.label7.TabIndex = 11;
             this.label7.Text = "CNIC";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -858,6 +951,7 @@
             this.label6.Size = new System.Drawing.Size(88, 25);
             this.label6.TabIndex = 10;
             this.label6.Text = "Gender";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label3
             // 
@@ -870,6 +964,7 @@
             this.label3.Size = new System.Drawing.Size(72, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "Name";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button2
             // 
@@ -878,7 +973,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(382, 370);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 40);
+            this.button2.Size = new System.Drawing.Size(94, 28);
             this.button2.TabIndex = 9;
             this.button2.Text = "Register";
             this.button2.UseVisualStyleBackColor = false;
@@ -888,8 +983,9 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(178, 158);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 20);
+            this.textBox1.Size = new System.Drawing.Size(203, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -902,6 +998,7 @@
             this.label1.Size = new System.Drawing.Size(52, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Age";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label4
             // 
@@ -914,41 +1011,7 @@
             this.label4.Size = new System.Drawing.Size(184, 31);
             this.label4.TabIndex = 6;
             this.label4.Text = "User Register";
-            // 
-            // bunifuFlatButton3
-            // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "        Add User";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton3.ForeColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 40D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 349);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.DimGray;
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(234, 56);
-            this.bunifuFlatButton3.TabIndex = 26;
-            this.bunifuFlatButton3.Text = "        Add User";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // addperson
             // 

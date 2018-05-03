@@ -36,7 +36,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Dpt_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dpt_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -45,12 +51,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -127,6 +127,11 @@
             this.Dpt_Name.HeaderText = "Dpt_Name";
             this.Dpt_Name.Name = "Dpt_Name";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Branch_Address";
+            this.Column1.Name = "Column1";
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Silver;
@@ -146,6 +151,63 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(793, 491);
             this.panel4.TabIndex = 14;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(392, 143);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(230, 21);
+            this.comboBox3.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkGray;
+            this.label5.Location = new System.Drawing.Point(123, 138);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(158, 24);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Branch Address";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DimGray;
+            this.button3.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(152, 393);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(108, 52);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DimGray;
+            this.button2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(152, 231);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(108, 52);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Add";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DimGray;
+            this.button4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(152, 313);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(108, 52);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "Edit";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -251,67 +313,6 @@
             this.label3.Size = new System.Drawing.Size(437, 34);
             this.label3.TabIndex = 4;
             this.label3.Text = "Welcome to National Hospital";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DimGray;
-            this.button4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(152, 313);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 52);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DimGray;
-            this.button2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(152, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 52);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.DimGray;
-            this.button3.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(152, 393);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 52);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Branch_Address";
-            this.Column1.Name = "Column1";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkGray;
-            this.label5.Location = new System.Drawing.Point(123, 138);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 24);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Branch Address";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(392, 143);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(230, 21);
-            this.comboBox3.TabIndex = 24;
             // 
             // department
             // 
