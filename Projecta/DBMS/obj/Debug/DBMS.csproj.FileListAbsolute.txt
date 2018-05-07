@@ -30,3 +30,4 @@ C:\Users\Khunsha_103\source\repos\Projecta\DBMS\bin\Debug\DBMS.exe
 C:\Users\Khunsha_103\source\repos\Projecta\DBMS\bin\Debug\DBMS.pdb
 C:\Users\Khunsha_103\source\repos\Projecta\DBMS\obj\Debug\DBMS.department.resources
 C:\Users\Khunsha_103\source\repos\Projecta\DBMS\obj\Debug\DBMS.patient1.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\bin\Debug\DBMS.exe.config
