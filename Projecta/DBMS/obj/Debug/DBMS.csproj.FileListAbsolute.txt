@@ -31,3 +31,25 @@ C:\Users\Khunsha_103\source\repos\Projecta\DBMS\bin\Debug\DBMS.pdb
 C:\Users\Khunsha_103\source\repos\Projecta\DBMS\obj\Debug\DBMS.department.resources
 C:\Users\Khunsha_103\source\repos\Projecta\DBMS\obj\Debug\DBMS.patient1.resources
 C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\bin\Debug\DBMS.exe.config
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\bin\Debug\DBMS.exe
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\bin\Debug\DBMS.pdb
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\bin\Debug\Bunifu_UI_v1.5.dll
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.csprojResolveAssemblyReference.cache
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.addperson.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.AdminPanel.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.Branch.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.doctorLogin.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.DoctorPanel.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.outpatient.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.pharmacy.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.department.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.AdminLogin.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.Rcptlogin.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.RcptPanel.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.Adrpt.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.MDIParent1.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.patient1.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.Properties.Resources.resources
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.csproj.GenerateResource.Cache
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.exe
+C:\Users\aplus\Documents\Visual Studio 2015\Projects\Projecta\DBMS\obj\Debug\DBMS.pdb

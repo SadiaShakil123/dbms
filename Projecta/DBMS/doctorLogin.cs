@@ -14,6 +14,7 @@ namespace DBMS
     public partial class doctorLogin : Form
     {
         List<string> diseaselist = new List<string>();
+        List<string> priscriptionList = new List<string>();
         int flag = 0;
         int flagold = 0;
         int flagnew = 0;
@@ -21,12 +22,17 @@ namespace DBMS
         {
             InitializeComponent();
             comboBox4.Hide();
-            textBox4.Hide();
-            button6.Hide();
             fillcomboCnic(comboBox9);
             fillcomboCnic(comboBox2);
             bunifuFlatButton3.Hide();
             fillcombodisease(comboBox4);
+            bunifuThinButton21.Hide();
+            bunifuThinButton22.Hide();
+            textBox5.Hide();
+            comboBox5.Hide();
+            label14.Hide();
+            label15.Hide();
+            button7.Hide();
         }
 
         public void fillcomboCnic(ComboBox c)
@@ -80,25 +86,25 @@ namespace DBMS
             conn.Close();
             return dId;
         }
-        public void getPatName()
+        public string getPatName(ComboBox c)
         {
-            //int bId = 0;
-            //string conUrl = "Data Source=DESKTOP-0DGR9RA; Initial Catalog = Hospital Management System; Integrated Security = True";
-            //SqlConnection conn = new SqlConnection(conUrl);
-            //string cmd = "select * from dbo.Department";
-            //SqlCommand command = new SqlCommand(cmd, conn);
-            //conn.Open();
-            //SqlDataReader reader = command.ExecuteReader();
-            //while (reader.Read())
-            //{
-            //    if (reader["Dpt_Name"].ToString() == c.SelectedItem.ToString())
-            //    {
-            //        bId = int.Parse(reader["Dpt_id"].ToString());
-            //        break;
-            //    }
-            //}
-            //conn.Close();
-            //return bId;
+            string pname = null;
+            string conUrl = "Data Source=DESKTOP-0DGR9RA; Initial Catalog = Hospital Management System; Integrated Security = True";
+            SqlConnection conn = new SqlConnection(conUrl);
+            string cmd = "select * from dbo.Patient";
+            SqlCommand command = new SqlCommand(cmd, conn);
+            conn.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader["P_CNIC"].ToString() == c.SelectedItem.ToString())
+                {
+                    pname = reader["P_Name"].ToString();
+                    break;
+                }
+            }
+            conn.Close();
+            return pname;
         }
         public int getPatientId(ComboBox c)
         {
@@ -463,7 +469,7 @@ namespace DBMS
             //adding examine patient 
             if (flagnew == 1)
             {
-                if (flag == 0)
+                if (flag == 0) // if only 1 disease is entered
                 {
                     if(!isDiseaseAlreadyPresent(textBox4.Text))
                     {
@@ -515,6 +521,64 @@ namespace DBMS
             textBox4.Show();
             button6.Show();
             flagnew = 1;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            int index = comboBox4.FindString(textBox4.Text);
+            flagnew = 0;
+            flagold = 0;
+            if (index < 0)
+            {
+                // it means that the value that u had enterd in your text box does not match to any of the combomox value
+                flagnew = 1;
+                return;
+            }
+            else
+            {
+                comboBox4.SelectedIndex = index;
+                flagold = 1;
+                return;
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox9.SelectedItem.ToString() == "Admit Patient")
+            {
+                comboBox5.Show();
+                label14.Show();
+            }
+            else if (comboBox9.SelectedItem.ToString() == "Regular Patient")
+            {
+                label15.Show();
+                textBox5.Show();
+                button7.Show();
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox3.Text = getPatName(comboBox2);
+        }
+        private bool isPriscriptionAlreadyPresent(string prescription)
+        {
+            
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string prescription = textBox5.Text;
+            priscriptionList.Add(prescription);
+            textBox5.Text = null;
+            foreach (string s in priscriptionList)
+            {
+                if (!isPriscriptionAlreadyPresent(s)) /
+                {
+                    enetrDisease(s);
+                }
+                fillPatientDisease(s);
+            }
+            flag = 1;
         }
     }
 }

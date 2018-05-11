@@ -66,7 +66,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(753, 485);
             this.panel7.TabIndex = 31;
-            this.panel7.Visible = false;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // textBox17
@@ -75,6 +74,7 @@
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(217, 20);
             this.textBox17.TabIndex = 17;
+            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // comboBox9
             // 
@@ -86,6 +86,7 @@
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(217, 21);
             this.comboBox9.TabIndex = 15;
+            this.comboBox9.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
             // 
             // label28
             // 

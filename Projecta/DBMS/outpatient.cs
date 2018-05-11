@@ -13,6 +13,8 @@ namespace DBMS
 {
     public partial class outpatient : Form
     {
+        int i = 0;
+        int j = 0;
         public outpatient()
         {
             InitializeComponent();
@@ -82,6 +84,44 @@ namespace DBMS
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox9.SelectedItem.ToString() == "Male")
+            {
+                button3.Hide();
+            }
+            else if (comboBox9.SelectedItem.ToString() == "Female")
+                button3.Show();
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+            int index = comboBox9.FindString(textBox17.Text);
+            i = j = 0;
+
+            if (index < 0)
+
+            {
+                MessageBox.Show(j + "   j");
+                i = 1;
+                return;
+              // it means that the value that u had enterd in your text box does not match to any of the combomox value
+
+            }
+
+            else
+
+            {
+                // here is the case when u enter the same string in text box that exists in combobox and then
+                //ur combo box will automatically sekect that string
+                comboBox9.SelectedIndex = index;
+                j = 1;
+                MessageBox.Show(j+ "         j");
+                return;
+            }
+            MessageBox.Show(i + "   " + j);
         }
     }
 }
