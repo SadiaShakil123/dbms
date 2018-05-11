@@ -563,7 +563,7 @@ namespace DBMS
         }
         private bool isPriscriptionAlreadyPresent(string prescription)
         {
-            
+            return true;
         }
         private void button7_Click(object sender, EventArgs e)
         {
@@ -572,7 +572,7 @@ namespace DBMS
             textBox5.Text = null;
             foreach (string s in priscriptionList)
             {
-                if (!isPriscriptionAlreadyPresent(s)) /
+                if (!isPriscriptionAlreadyPresent(s)) 
                 {
                     enetrDisease(s);
                 }
